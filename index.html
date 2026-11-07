@@ -1,77 +1,625 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Stress Levels and Coping Mechanisms</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stress Awareness | Community Service Project</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+nav {
+    background: #254b70;
+    padding: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a9e5f5;
+}
+
+/* Hero Section */
+
+.hero {
+    background: linear-gradient(120deg, #254b70, #5799b5);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.hero button {
+    margin-top: 25px;
+    padding: 13px 25px;
+    background: white;
+    color: #254b70;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Common Sections */
+
+section {
+    padding: 55px 8%;
+}
+
+section h2 {
+    color: #254b70;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+section > p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000012;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #28718b;
+    margin: 12px 0;
+}
+
+.icon {
+    font-size: 40px;
+}
+
+/* Background sections */
+
+.light {
+    background: #e8f1f7;
+}
+
+/* Activities */
+
+.week {
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #5799b5;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* Survey */
+
+.survey {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.survey label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.survey select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.survey button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #254b70;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    color: #28718b;
+    font-weight: bold;
+}
+
+/* Gallery */
+
+.gallery-box {
+    background: #dcebf3;
+    padding: 40px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.gallery-box p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* Student details */
+
+.details {
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+.details p {
+    margin: 12px;
+}
+
+/* Footer */
+
+footer {
+    background: #254b70;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+@media(max-width: 600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Stress Levels and Coping Mechanisms</h1>
-    <p>Understand Stress | Improve Well-being</p>
-</header>
+<!-- Navigation -->
 
 <nav>
+    <h2>🧠 STRESS AWARENESS</h2>
+
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#stress">Stress Levels</a>
-    <a href="#coping">Coping Methods</a>
+    <a href="#causes">Causes</a>
+    <a href="#effects">Effects</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#activities">Activities</a>
+    <a href="#survey">Survey</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<section id="home">
-    <h2>Welcome to Our Project</h2>
+<!-- Home -->
+
+<div class="hero" id="home">
+
+    <h1>STRESS LEVELS AND COPING MECHANISMS</h1>
+
     <p>
-        Stress is a common part of everyday life.
-        Understanding stress and learning healthy
-        coping methods can improve our well-being.
+    A Community Service Project focused on
+    understanding stress and promoting healthy
+    coping methods in society.
     </p>
-</section>
+
+    <button onclick="location.href='#about'">
+        Explore Our Project
+    </button>
+
+</div>
+
+<!-- About -->
 
 <section id="about">
-    <h2>About the Project</h2>
+
+    <h2>About Our Project</h2>
+
     <p>
-        This Community Service Project creates awareness
-        about stress among students and society.
-        It explains common causes, stress levels and
-        healthy ways to manage stress.
+    Stress is a common experience in everyday life.
+    Students and community members may experience
+    stress due to studies, work, family responsibilities
+    and other daily challenges.
     </p>
-</section>
 
-<section id="stress">
-    <h2>Different Stress Levels</h2>
+    <p>
+    This project aims to create awareness about stress
+    levels, understand its causes and encourage healthy
+    coping mechanisms for better well-being.
+    </p>
 
-    <div class="card">
-        <h3>Low Stress</h3>
-        <p>Feeling calm and comfortable.</p>
-    </div>
+    <h3 style="color:#28718b; margin-top:25px;">
+        Our Main Objectives
+    </h3>
 
-    <div class="card">
-        <h3>Moderate Stress</h3>
-        <p>Experiencing some pressure or tension.</p>
-    </div>
-
-    <div class="card">
-        <h3>High Stress</h3>
-        <p>Feeling overwhelmed and needing support.</p>
-    </div>
-</section>
-
-<section id="coping">
-    <h2>Coping Mechanisms</h2>
-    <ul>
-        <li>Practice relaxation and comfortable breathing.</li>
-        <li>Maintain a regular sleep routine.</li>
-        <li>Plan daily activities.</li>
-        <li>Talk with trusted people.</li>
-        <li>Enjoy hobbies and take breaks.</li>
-        <li>Seek professional support when needed.</li>
+    <ul style="margin:20px 40px;">
+        <li>Understand different stress levels.</li>
+        <li>Identify common causes of stress.</li>
+        <li>Study the effects of stress on daily life.</li>
+        <li>Promote healthy coping mechanisms.</li>
+        <li>Create awareness among students and society.</li>
+        <li>Encourage community participation.</li>
     </ul>
+
 </section>
+
+<!-- Causes -->
+
+<section id="causes" class="light">
+
+    <h2>Causes of Stress</h2>
+
+    <p>
+    Different situations and responsibilities
+    can contribute to everyday stress.
+    </p>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>Academic Stress</h3>
+            <p>Exams, assignments and academic pressure.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⏰</div>
+            <h3>Time Management</h3>
+            <p>Difficulty managing daily activities and responsibilities.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👨‍👩‍👧</div>
+            <h3>Family Responsibilities</h3>
+            <p>Family expectations and personal responsibilities.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💼</div>
+            <h3>Work Pressure</h3>
+            <p>Workload and professional responsibilities.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Effects -->
+
+<section id="effects">
+
+    <h2>Effects of Stress</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Mental Well-being</h3>
+            <p>Stress may affect concentration and emotional well-being.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">😴</div>
+            <h3>Sleep Problems</h3>
+            <p>Stress may interfere with regular sleeping habits.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📖</div>
+            <h3>Academic Performance</h3>
+            <p>Stress may affect learning and concentration.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Social Relationships</h3>
+            <p>Stress may influence communication and relationships.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Solutions -->
+
+<section id="solutions" class="light">
+
+    <h2>Prevention and Coping Mechanisms</h2>
+
+    <p>
+    Healthy habits and support from others can help
+    people manage everyday stress.
+    </p>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="icon">🧘</div>
+            <h3>Relaxation</h3>
+            <p>Practice comfortable breathing and relaxation activities.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚶</div>
+            <h3>Physical Activity</h3>
+            <p>Enjoy walking and other comfortable physical activities.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📅</div>
+            <h3>Time Planning</h3>
+            <p>Organize daily tasks and take regular breaks.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💬</div>
+            <h3>Communication</h3>
+            <p>Share concerns with trusted people.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌙</div>
+            <h3>Healthy Sleep</h3>
+            <p>Maintain a regular and healthy sleep routine.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎨</div>
+            <h3>Hobbies</h3>
+            <p>Spend time on music, reading and creative activities.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Activities -->
+
+<section id="activities">
+
+    <h2>Project Activities</h2>
+
+    <p>
+    Eight-week Community Service Project documentation.
+    </p>
+
+    <div class="week">
+        <h3>Week 1 – Planning and Questionnaire Design</h3>
+        <p>Project planning, community selection and preparation of survey questions.</p>
+    </div>
+
+    <div class="week">
+        <h3>Week 2 – Community Survey</h3>
+        <p>Collect information about stress awareness and common challenges.</p>
+    </div>
+
+    <div class="week">
+        <h3>Week 3 – Awareness Campaign</h3>
+        <p>Share information about stress and healthy coping methods.</p>
+    </div>
+
+    <div class="week">
+        <h3>Week 4 – Deep-Dive Survey</h3>
+        <p>Study community responses and identify common stress factors.</p>
+    </div>
+
+    <div class="week">
+        <h3>Week 5 – Community Intervention</h3>
+        <p>Conduct awareness activities and encourage healthy habits.</p>
+    </div>
+
+    <div class="week">
+        <h3>Week 6 – Impact Assessment</h3>
+        <p>Collect feedback and understand changes in awareness.</p>
+    </div>
+
+    <div class="week">
+        <h3>Week 7 – Report Preparation</h3>
+        <p>Organize survey information, photographs and observations.</p>
+    </div>
+
+    <div class="week">
+        <h3>Week 8 – Final Documentation</h3>
+        <p>Prepare and submit the final CSP report.</p>
+    </div>
+
+</section>
+
+<!-- Survey -->
+
+<section id="survey" class="light">
+
+    <h2>Community Survey</h2>
+
+    <p>
+    Answer these questions to understand stress awareness.
+    </p>
+
+    <div class="survey">
+
+        <label>1. Are you aware of stress management?</label>
+        <select>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+
+        <label>2. What is a common cause of stress?</label>
+        <select>
+            <option>Academic Pressure</option>
+            <option>Work Pressure</option>
+            <option>Family Responsibilities</option>
+            <option>Time Management</option>
+        </select>
+
+        <label>3. Do you practice relaxation activities?</label>
+        <select>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Sometimes</option>
+        </select>
+
+        <label>4. Do you discuss your concerns with others?</label>
+        <select>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Sometimes</option>
+        </select>
+
+        <label>5. Do you think awareness can help people manage stress?</label>
+        <select>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+
+        <button onclick="showMessage()">Submit Survey</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <p>
+    Note: Record actual community survey results
+    separately for your CSP report.
+    </p>
+
+</section>
+
+<!-- Gallery -->
+
+<section id="gallery">
+
+    <h2>Project Gallery</h2>
+
+    <p>
+    Add original photographs of community surveys,
+    awareness activities and project work here.
+    </p>
+
+    <div class="container">
+
+        <div class="gallery-box">
+            🏫
+            <p>Student Awareness</p>
+        </div>
+
+        <div class="gallery-box">
+            📝
+            <p>Community Survey</p>
+        </div>
+
+        <div class="gallery-box">
+            🤝
+            <p>Community Participation</p>
+        </div>
+
+        <div class="gallery-box">
+            🌱
+            <p>Healthy Lifestyle Awareness</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Student Details -->
+
+<section id="contact" class="light">
+
+    <h2>About the Student</h2>
+
+    <div class="details">
+
+        <p><b>Project Title:</b> Stress Levels and Coping Mechanisms</p>
+
+        <p><b>Student Name:</b> Your Name</p>
+
+        <p><b>Branch:</b> CSE</p>
+
+        <p><b>College:</b> Sree Venkateswara College of Engineering</p>
+
+        <p><b>Project Location:</b> Your Village</p>
+
+        <p><b>Project Type:</b> Community Service Project</p>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
 
 <footer>
-    <p>Community Service Project</p>
+
+    <h2 style="color:white;">🧠 Every Mind Matters</h2>
+
     <p>Stress Levels and Coping Mechanisms</p>
+
+    <p>Community Service Project | CSE</p>
+
+    <p>Promoting Awareness for a Healthier Society.</p>
+
 </footer>
+
+<script>
+function showMessage() {
+    document.getElementById("result").innerHTML =
+    "Thank you for participating in our stress awareness survey!";
+}
+</script>
 
 </body>
 </html>
